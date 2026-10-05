@@ -1,49 +1,36 @@
-<!-- hide -->
-# Hello World with Vanilla JS
+# Gerador de cartas aleatórias
 
-> 🇪🇸 [Spanish version of this readme is available](./README.es.md).
-<!-- endhide -->
-Start coding a JS/HTML/CSS website in 30 seconds by opening this template using 4Geeks' [One-Click Coding](https://s.4geeks.com/start?repo=https://github.com/4GeeksAcademy/vanillajs-hello) or locally on your computer.
+Projeto do curso Full Stack da 4Geeks Academy, desenvolvido a partir do repositório oficial [vanillajs-hello](https://github.com/4GeeksAcademy/vanillajs-hello).
 
-## Before you begin
+## Executar localmente
 
-Install the packages by typing: `npm install`.
+Requer Node.js 20 ou superior.
 
-### How do I run my website to see live changes?  
+```sh
+npm install
+npm start
+```
 
-Type on the command line `$ npm run start` and type localhost on the browser.
+Abra o endereço mostrado no terminal. Para gerar a versão de produção, execute `npm run build` e, para visualizá-la, `npm run preview`.
 
-### Where do I write my code?  
+## Funcionalidades
 
-It depends on the language, but you have `./src/app.js`, `./src/style.css` and `./src/index.html` respectively, you can add new `.html` as you please, just make sure to import it on the `app.js`.
+- Carta aleatória ao carregar a página, com um dos quatro naipes e um dos 13 valores: 2–10, J, Q, K e A.
+- Copas e ouros em vermelho; espadas e paus em preto.
+- Botão para sortear uma nova carta.
+- Sorteio automático a cada 10 segundos, com opção de desativar.
+- Campos para ajustar a largura (180–440 px) e altura (240–600 px).
+- Layout adaptável à tela e controles acessíveis pelo teclado.
 
-> Note: remember that the JS workflow starts inside `window.onload`.
+Cada sorteio é independente; a mesma carta pode aparecer novamente, como em um sorteio com reposição. Em telas estreitas, a largura se limita ao espaço disponível.
 
+## Organização
 
-## Troubleshooting
+- `src/index.html`: estrutura e controles.
+- `src/style.css`: aparência da carta e layout.
+- `src/card.js`: valores, naipes e sorteio.
+- `src/app.js`: atualização do DOM, eventos e temporizador.
 
-### I don't see my changes...
+O sorteio usa `Math.floor(Math.random() * tamanho)` para escolher um índice válido em cada lista. A inicialização ocorre em `window.onload`, conforme o exercício.
 
-Everytime you change any file inside the `./src` folder the website's public URL will automatically refresh the changes (it's a process called hot deploy)
-Remember also to refresh cleaning the cache (`command+shift+r` on Mac, `control+shift+r` on PC & Linux)
-
-### How do I include more images in my project?
-
-Add them inside the `./src/assets/img` folder and import them from any of your JS files. E.g: `import "../assets/img/rigo-baby.jpg";`
-
-### How do I include more JS files?
-
-Just add the files into the src folder and import the file/variables into your app.js. E.g: `import myVar from "./file2.js"`
-
-### How do I publish the website?
-
-We have prepared the boilerplate to be compatible with [vercel](https://vercel.com/), very easy and in just one step! 
-You can read more about [deploying on vercel here](https://4geeks.com/docs/start/deploy-vercel).
-
-<!-- hide -->
-### Thank you
-
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning) or [CyberSecurity Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/cybersecurity)
-
-You can find other templates and resources like this at the [school's GitHub page](https://github.com/4geeksacademy/).
-<!-- endhide -->
+Enunciado: [Generador de Cartas Aleatorias](https://learn.4geeks.com/es/syllabus/spain-fs-pt-139/project/random-card-es#readme).

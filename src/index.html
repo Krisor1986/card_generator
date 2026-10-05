@@ -1,35 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="./assets/img/4geeks.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
+    <meta name="description" content="Gerador de cartas aleatórias com JavaScript." />
+    <title>Gerador de cartas</title>
   </head>
   <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
-    </div>
-
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+    <main>
+      <header><p class="eyebrow">4GEEKS · JAVASCRIPT</p><h1>A sorte está na mesa.</h1><p>Quatro naipes. Treze valores. Uma nova carta a cada sorteio.</p></header>
+      <div class="table"><div id="card" class="card" role="img" aria-label="Carta de baralho"><span class="suit top" aria-hidden="true"></span><span id="value" aria-hidden="true"></span><span class="suit bottom" aria-hidden="true"></span></div></div>
+      <p id="card-description" class="card-description" role="status" aria-live="polite"></p>
+      <section class="controls" aria-label="Controles da carta">
+        <button id="draw" type="button">Sortear nova carta <span aria-hidden="true">↗</span></button>
+        <label class="toggle"><input id="automatic" type="checkbox" checked /> Sortear automaticamente a cada 10 segundos</label>
+        <form id="dimensions"><fieldset><legend>Tamanho da carta</legend><div class="dimensions"><label>Largura (px)<input id="width" type="number" min="180" max="440" value="260" required /></label><label>Altura (px)<input id="height" type="number" min="240" max="600" value="360" required /></label><button type="submit" class="secondary">Aplicar</button></div></fieldset></form>
+        <p class="hint">Largura: 180–440 px · Altura: 240–600 px</p>
+      </section>
+      <footer>Feito com HTML, CSS e JavaScript puro.</footer>
+    </main>
     <script type="module" src="/app.js"></script>
   </body>
 </html>
