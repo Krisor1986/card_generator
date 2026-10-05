@@ -6,7 +6,7 @@ window.onload = function () {
   const value = document.querySelector("#value");
   const description = document.querySelector("#card-description");
   const automatic = document.querySelector("#automatic");
-  const names = { J: "Valete", Q: "Dama", K: "Rei", A: "Ás" };
+  const names = { J: "Jota", Q: "Reina", K: "Rey", A: "As" };
   let intervalId;
 
   function drawCard() {
@@ -32,13 +32,11 @@ window.onload = function () {
     resetTimer();
   });
   automatic.addEventListener("change", resetTimer);
-  document.querySelector("#dimensions").addEventListener("submit", event => {
-    event.preventDefault();
-    const width = document.querySelector("#width").valueAsNumber;
-    const height = document.querySelector("#height").valueAsNumber;
-    if (!Number.isFinite(width) || !Number.isFinite(height) || width < 180 || width > 440 || height < 240 || height > 600) return;
-    card.style.width = `${width}px`;
-    card.style.height = `${height}px`;
+  const size = document.querySelector("#size");
+  const sizeValue = document.querySelector("#size-value");
+  size.addEventListener("input", () => {
+    card.style.width = `${260 * size.valueAsNumber / 100}px`;
+    sizeValue.value = `${size.value}%`;
   });
 
   drawCard();

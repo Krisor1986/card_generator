@@ -1,8 +1,8 @@
 export const suits = [
-  { name: "copas", symbol: "♥", className: "heart" },
-  { name: "espadas", symbol: "♠", className: "spade" },
-  { name: "paus", symbol: "♣", className: "club" },
-  { name: "ouros", symbol: "♦", className: "diamond" }
+  { name: "corazones", symbol: "♥", className: "heart" },
+  { name: "picas", symbol: "♠", className: "spade" },
+  { name: "tréboles", symbol: "♣", className: "club" },
+  { name: "diamantes", symbol: "♦", className: "diamond" }
 ];
 export const values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 

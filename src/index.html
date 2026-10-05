@@ -1,24 +1,30 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="./assets/img/4geeks.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Gerador de cartas aleatórias com JavaScript." />
-    <title>Gerador de cartas</title>
+    <meta name="description" content="Generador de cartas aleatorias con JavaScript." />
+    <title>Generador de cartas</title>
   </head>
   <body>
     <main>
-      <header><p class="eyebrow">4GEEKS · JAVASCRIPT</p><h1>A sorte está na mesa.</h1><p>Quatro naipes. Treze valores. Uma nova carta a cada sorteio.</p></header>
-      <div class="table"><div id="card" class="card" role="img" aria-label="Carta de baralho"><span class="suit top" aria-hidden="true"></span><span id="value" aria-hidden="true"></span><span class="suit bottom" aria-hidden="true"></span></div></div>
+      <header><h1>La suerte está sobre la mesa.</h1><p>Cuatro palos. Trece valores. Una nueva carta en cada sorteo.</p></header>
+      <div class="table"><div id="card" class="card" role="img" aria-label="Carta de la baraja"><span class="suit top" aria-hidden="true"></span><span id="value" aria-hidden="true"></span><span class="suit bottom" aria-hidden="true"></span></div></div>
       <p id="card-description" class="card-description" role="status" aria-live="polite"></p>
-      <section class="controls" aria-label="Controles da carta">
-        <button id="draw" type="button">Sortear nova carta <span aria-hidden="true">↗</span></button>
-        <label class="toggle"><input id="automatic" type="checkbox" checked /> Sortear automaticamente a cada 10 segundos</label>
-        <form id="dimensions"><fieldset><legend>Tamanho da carta</legend><div class="dimensions"><label>Largura (px)<input id="width" type="number" min="180" max="440" value="260" required /></label><label>Altura (px)<input id="height" type="number" min="240" max="600" value="360" required /></label><button type="submit" class="secondary">Aplicar</button></div></fieldset></form>
-        <p class="hint">Largura: 180–440 px · Altura: 240–600 px</p>
+      <section class="controls" aria-label="Controles de la carta">
+        <button id="draw" type="button">Generar nueva carta <span aria-hidden="true">↗</span></button>
+        <label class="toggle"><input id="automatic" type="checkbox" checked /> Generar automáticamente cada 10 segundos</label>
+        <fieldset id="dimensions">
+          <legend>Tamaño de la carta</legend>
+          <div class="dimensions">
+            <label for="size">Tamaño <output id="size-value" for="size">100%</output>
+              <input id="size" type="range" min="70" max="160" value="100" step="1" />
+            </label>
+          </div>
+        </fieldset>
+        <p class="hint">Arrastra hacia la izquierda para reducir y hacia la derecha para ampliar.</p>
       </section>
-      <footer>Feito com HTML, CSS e JavaScript puro.</footer>
     </main>
     <script type="module" src="/app.js"></script>
   </body>

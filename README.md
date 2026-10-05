@@ -1,36 +1,41 @@
-# Gerador de cartas aleatórias
+# Random Card Generator
 
-Projeto do curso Full Stack da 4Geeks Academy, desenvolvido a partir do repositório oficial [vanillajs-hello](https://github.com/4GeeksAcademy/vanillajs-hello).
+A Full Stack course project for 4Geeks Academy, built from the official [vanillajs-hello](https://github.com/4GeeksAcademy/vanillajs-hello) starter repository.
 
-## Executar localmente
+## Run locally
 
-Requer Node.js 20 ou superior.
+Requires Node.js 20 or later.
 
 ```sh
 npm install
 npm start
 ```
 
-Abra o endereço mostrado no terminal. Para gerar a versão de produção, execute `npm run build` e, para visualizá-la, `npm run preview`.
+Open the address displayed in the terminal. Run `npm run build` to create the production build and `npm run preview` to preview it locally.
 
-## Funcionalidades
+## Features
 
-- Carta aleatória ao carregar a página, com um dos quatro naipes e um dos 13 valores: 2–10, J, Q, K e A.
-- Copas e ouros em vermelho; espadas e paus em preto.
-- Botão para sortear uma nova carta.
-- Sorteio automático a cada 10 segundos, com opção de desativar.
-- Campos para ajustar a largura (180–440 px) e altura (240–600 px).
-- Layout adaptável à tela e controles acessíveis pelo teclado.
+- A random card on page load, with one of four suits and one of thirteen values: 2–10, J, Q, K and A.
+- Red hearts and diamonds; black spades and clubs.
+- A button to draw a new card.
+- Automatic draws every 10 seconds, with an option to turn them off.
+- A single size slider from 70% to 160%, preserving the card's 13:18 aspect ratio.
+- A responsive layout and keyboard-accessible controls.
 
-Cada sorteio é independente; a mesma carta pode aparecer novamente, como em um sorteio com reposição. Em telas estreitas, a largura se limita ao espaço disponível.
+Each draw is independent, so the same card can appear again. On narrow screens, the card fits the available width while maintaining its aspect ratio.
 
-## Organização
+## Project structure
 
-- `src/index.html`: estrutura e controles.
-- `src/style.css`: aparência da carta e layout.
-- `src/card.js`: valores, naipes e sorteio.
-- `src/app.js`: atualização do DOM, eventos e temporizador.
+- `src/index.html`: page structure and controls.
+- `src/style.css`: card appearance and layout.
+- `src/card.js`: suits, values and random selection.
+- `src/app.js`: DOM updates, event handlers and timer.
 
-O sorteio usa `Math.floor(Math.random() * tamanho)` para escolher um índice válido em cada lista. A inicialização ocorre em `window.onload`, conforme o exercício.
+The generator uses `Math.floor(Math.random() * array.length)` to choose a valid index from each array. Initialization runs in `window.onload`, as suggested in the exercise. All interface text, card names and source comments are in English.
 
-Enunciado: [Generador de Cartas Aleatorias](https://learn.4geeks.com/es/syllabus/spain-fs-pt-139/project/random-card-es#readme).
+## Exercise requirements
+
+The project generates a card on page load using the four standard suits and thirteen values, without jokers. It also implements the optional draw button, ten-second timer and size adjustment. The original separate width and height inputs have been replaced with one proportional size slider.
+
+[Course assignment](https://learn.4geeks.com/es/syllabus/spain-fs-pt-139/project/random-card-es#readme).
+# card_generator
