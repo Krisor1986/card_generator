@@ -39,3 +39,4 @@ The project generates a card on page load using the four standard suits and thir
 
 [Course assignment](https://learn.4geeks.com/es/syllabus/spain-fs-pt-139/project/random-card-es#readme).
 # card_generator
+# card_generator
